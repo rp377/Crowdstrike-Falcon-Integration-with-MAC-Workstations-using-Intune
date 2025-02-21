@@ -68,5 +68,11 @@ streamlines the deployment and avoids manual authorization steps on hosts.
   sudo /Applications/Falcon.app/Contents/Resources/falconctl license 0123456789ABCDEFGHIJKLMNOPQRSTUV-WX
   ```
 
+You can automate the complete execution by using any MDM application to install the agent. For our scenario, we would be utilizing Intune.
+
+### Agent Installation using Intune
+
+
+
 
 
