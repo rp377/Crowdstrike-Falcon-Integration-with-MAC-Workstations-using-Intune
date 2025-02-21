@@ -37,6 +37,36 @@ only required once. Subsequent upgrades using the built-in upgrade functionality
 - [Profile for Sequoia and later OS versions](<https://github.com/rp377/Crowdstrike-Falcon-Integration-with-MAC-Workstations/blob/main/Falcon%20Profile%20OS%20v15.mobileconfig>)
 
 The profile provided by CrowdStrike for Sonoma and earlier OS versions worked as per our expections. However, the one for Sequoia did not work correctly. We have fixed that for you!!!
+You can refer the above-attached profiles only to meet your requirements.
+
+### Installing the Falcon sensor for Mac
+
+There are diﬀerent methods to successfully install the sensor:
+
+- Recommended installation method: Use an MDM solution to distribute the profile we provide to your endpoints prior to the deployment process. This
+streamlines the deployment and avoids manual authorization steps on hosts.
+- Alternate installation methods:
+  - Use the standalone installer which streamlines your authorization and post-verification steps.
+
+| **Note** | If you don’t use an MDM to distribute the profile we provide, multiple authentication confirmations from the OS occur on the host and must manually be approved. |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------|
+
+### Recommended installation method: Using an MDM to sync profiles
+
+1. Use an MDM to deploy the correct profile to the hosts. This step can be performed any time prior to sensor deployment. You can utilize the profiles mentioned above.
+2. Use the Google Chrome browser to download the sensor installer
+3. Copy your customer ID checksum (CCID) from Host setup and management > Deploy > Sensor downloads.
+4. Run the sensor installer on your device using one of these two methods:
+  - Double-click the .pkg file.
+  - Run this command at a terminal, replacing <installer_filename> with the path and file name of your installer package:
+    ```sh
+    sudo installer -verboseR -package <installer_filename> -target /
+    ```
+5. When prompted, enter administrative credentials for the installer.
+6. Run falconctl, installed with the Falcon sensor, to provide your customer ID checksum (CCID). This command is slightly diﬀerent if you're installing with installation tokens. In this example, replace 0123456789ABCDEFGHIJKLMNOPQRSTUV-WX with your CID.
+  ```sh
+  sudo /Applications/Falcon.app/Contents/Resources/falconctl license 0123456789ABCDEFGHIJKLMNOPQRSTUV-WX
+  ```
 
 
 
