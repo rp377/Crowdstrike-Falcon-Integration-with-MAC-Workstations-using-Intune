@@ -33,8 +33,8 @@ only required once. Subsequent upgrades using the built-in upgrade functionality
 
 ### Crowdstrike has created 2 profiles based on OS Versions
 
-- Profile for Sonoma and earlier OS versions (<>)
-- Profile for Sequoia and later OS versions (<>)
+- [Profile for Sonoma and earlier OS versions](<https://github.com/rp377/Crowdstrike-Falcon-Integration-with-MAC-Workstations/blob/main/Falcon%20Profile%20-%20no%20Kext.mobileconfig>)
+- [Profile for Sequoia and later OS versions](<https://github.com/rp377/Crowdstrike-Falcon-Integration-with-MAC-Workstations/blob/main/Falcon%20Profile%20OS%20v15.mobileconfig>)
 
 The profile provided by CrowdStrike for Sonoma and earlier OS versions worked as per our expections. However, the one for Sequoia did not work correctly. We have fixed that for you!!!
 
