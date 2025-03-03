@@ -65,13 +65,14 @@ streamlines the deployment and avoids manual authorization steps on hosts.
 5. When prompted, enter administrative credentials for the installer.
 6. Run falconctl, installed with the Falcon sensor, to provide your customer ID checksum (CCID). This command is slightly diﬀerent if you're installing with installation tokens. In this example, replace 0123456789ABCDEFGHIJKLMNOPQRSTUV-WX with your CID.
   ```sh
-  sudo /Applications/Falcon.app/Contents/Resources/falconctl license 0123456789ABCDEFGHIJKLMNOPQRSTUV-WX
+  sudo /Applications/Falcon.app/Contents/Resources/falconctl license 0123456789ABCDEFGHIJKLMNOPQRSTUV-WX\
   ```
 
 You can automate the complete execution by using any MDM application to install the agent. For our scenario, we would be utilizing Intune.
 
 ### Agent Installation using Intune
 
+You can follow the traditional methods to create a task in Intune. 2 Tasks can be craeted where one would be created for pushing the profiles on the workstation and the other task would be used to perform installation of CS Falcon using the above provided commandline.
 
 
 
